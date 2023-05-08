@@ -1,0 +1,13 @@
+.ideas-container {
+  display:flex;
+}
+.an-idea {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid white;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 8px;
+  background-color: rgba(203, 167, 167, 0.658)
+}

@@ -1,0 +1,27 @@
+.App {
+  height: 100vh;
+  width: 100vw;
+}
+
+.main-container {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(151, 70, 231, 0.912);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  display: flex;
+  color: aliceblue;
+  background-color: rgba(151, 70, 131, .700);
+  justify-content: center;
+  width: 20%;
+  height: 75px;
+  font-size: 4rem;
+  border: 2px white solid;
+  border-radius: 7px;
+  padding: 15px;
+}
