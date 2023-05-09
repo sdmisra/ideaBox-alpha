@@ -1,19 +1,22 @@
 import React from 'react';
+import Card from '../Card/Card';
 import './Ideas.css';
 
-const Ideas = ({ideas}) => {
-  console.log(ideas)
-  const ideaMap = ideas.map((idea) => {
+const Ideas = ({ideas, deleteIdea}) => {
+  const ideaCards = ideas.map((idea) => {
     return (
-    <section className="an-idea" key={idea.id}>
-    <h1 id={idea.id}>{idea.title}</h1>
-    <p>{idea.description}</p>
-    </section>
+      <Card
+        title = {idea.title}
+        description = {idea.description}
+        id = {idea.id}
+        key = {idea.id}
+        deleteIdea = {deleteIdea}
+      />
   )})
 
   return (
     <h2 className="ideas-container">
-      {ideaMap}
+      {ideaCards}
     </h2>
   )
 }

@@ -12,7 +12,17 @@ class App extends Component {
     }
   }
   componentDidMount() {
-    this.setState({ideas : savedIdeas})
+    this.setState({ ideas : savedIdeas })
+  }
+
+  addIdea = (newIdea) => {
+    this.setState({ ideas: [...this.state.ideas, newIdea] })
+  }
+
+  deleteIdea = (id) => {
+    console.log(id);
+    const filteredIdeas = this.state.ideas.filter(idea => idea.id != id);
+    this.setState({ ideas: filteredIdeas });
   }
 
   render() {
@@ -20,8 +30,8 @@ class App extends Component {
       <section className="main-container">
         <h1 className="title">Ideabox</h1>
         {!this.state.ideas.length && <h2>No ideas yet! Use the form below to add a few...</h2>}
-        < Ideas ideas={this.state.ideas} />
-        < Form />
+        < Ideas ideas={this.state.ideas}  deleteIdea={this.deleteIdea}/>
+        < Form addIdea={this.addIdea} />
       </section>
     )
   }
